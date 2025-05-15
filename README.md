@@ -85,4 +85,12 @@ View recent reviews with sentiment and emojis.
 Use the Sign Out button to clear saved reviews.
 
 
+### Scrrenshots:
+![image](https://github.com/user-attachments/assets/92a5ce9d-a0c9-4902-8254-933cb7ee251b)
+
+![image](https://github.com/user-attachments/assets/d1f6ddcf-fa34-4716-a9bf-72b4fc9888af)
+
+### Video Demo Working link:
+
+https://drive.google.com/file/d/1vFj_6ajal5lieMEJg3b6EN4NOMoTxiJQ/view?usp=sharing
 
