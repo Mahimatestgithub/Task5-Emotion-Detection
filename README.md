@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+# Emotion Detection Project Setup Guide
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Overview
 
-## Available Scripts
+This project provides a unified system for emotion detection from both text and audio reviews.  
+- The **frontend** is built with React.js for submitting text reviews and uploading audio files.  
+- The **backend** is built with Python (Flask or FastAPI) to handle audio transcription using Whisper and sentiment analysis using Hugging Face models.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Text review input with real-time sentiment prediction.  
+- Audio review upload with automatic transcription and sentiment analysis.  
+- Storage of reviews with sentiment scores.  
+- Responsive UI with recent reviews display.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Requirements
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Python 3.8+  
+- Node.js and npm  
+- React.js  
+- Flask or FastAPI  
+- OpenAI Whisper (local or API)  
+- Hugging Face Transformers  
+- Additional Python packages (see `requirements.txt`)  
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation and Setup
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 1. Clone the repository
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+git clone https://github.com/Mahimatestgithub/Task5-Emotion-Detection.git
 
-### `npm run eject`
+cd Task5-Emotion-Detection
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 2. Set up the backend
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Create and activate a Python virtual environment:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+python -m venv venv
+# On Windows
+venv\Scripts\activate
+# On macOS/Linux
+source venv/bin/activate
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+### Install backend dependencies:
+pip install -r requirements.txt
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Make sure you have ffmpeg installed on your system (required for audio processing).
 
-### Code Splitting
+Configure any necessary environment variables (like your OpenAI API key).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Run the backend server:
+flask run
 
-### Analyzing the Bundle Size
+### 3. Set up the frontend
+Navigate to the frontend folder (if applicable):
+cd frontend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+Install frontend dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+npm install
 
-### Advanced Configuration
+Start the React development server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+npm start
 
-### Deployment
+Open http://localhost:3000 in your browser to view the app.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### 4. Usage
 
-### `npm run build` fails to minify
+Submit text reviews and get instant sentiment feedback.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Upload audio files (mp3, wav, etc.) to transcribe and analyze sentiment.
+
+View recent reviews with sentiment and emojis.
+
+Use the Sign Out button to clear saved reviews.
+
+
+
