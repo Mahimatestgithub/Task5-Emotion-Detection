@@ -1,4 +1,4 @@
-# Emotion Detection Project Setup Guide
+# Emotion Detection Project Setup Guide  without any external APIs
 
 ## Project Overview
 
@@ -23,7 +23,7 @@ This project provides a unified system for emotion detection from both text and 
 - Node.js and npm  
 - React.js  
 - Flask or FastAPI  
-- OpenAI Whisper (local or API)  
+- OpenAI Whisper (local) 
 - Hugging Face Transformers  
 - Additional Python packages (see `requirements.txt`)  
 
